@@ -9,7 +9,7 @@ public class EntityImplB implements EntityCollection {
     private TreeSet<Entity> entitySet;
 
     public EntityImplB() {
-        Comparator<Entity> comp = (e1, e2) -> Integer.compare(e1.getValue(),e2.getValue());
+        Comparator<Entity> comp = (e1, e2) -> Integer.compare(e1.getValue(), e2.getValue());
         entitySet = new TreeSet<>(comp);
     }
 

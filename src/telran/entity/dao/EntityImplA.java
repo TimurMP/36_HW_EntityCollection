@@ -28,13 +28,11 @@ public class EntityImplA implements EntityCollection {
      но так как у нас этой модели нет, я добавил компоратор в метод чтобы не было ошибок компиляции.*/
     @Override
     public Entity removeMaxValue() {
-        Comparator<Entity> comp = (e1, e2) -> Integer.compare(e1.getValue(),e2.getValue());
-        Entity toRemove = Collections.max(entitySet,comp);
-        if (entitySet.remove(toRemove)) {
-            return toRemove;
-        }
-        return null;
-    }
+        Comparator<Entity> comp = (e1, e2) -> Integer.compare(e1.getValue(), e2.getValue());
+        Entity toRemove = Collections.max(entitySet, comp);
+        entitySet.remove(toRemove);
+        return toRemove;
 
+    }
 
 }
