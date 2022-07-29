@@ -22,9 +22,10 @@ public class EntityImplA implements EntityCollection {
         entitySet.add(entity);
     }
 
+
     //O(n)
-    //Если я правильно понимаю, то теоритический, модель Entity должна иметь компаратор.
-    // но так как у нас этой модели нет, я добавил компоратор в метод чтобы не было ошибок компиляции.
+/*    Если я правильно понимаю, то теоретический, модель Entity должна иметь компаратор,
+     но так как у нас этой модели нет, я добавил компоратор в метод чтобы не было ошибок компиляции.*/
     @Override
     public Entity removeMaxValue() {
         Comparator<Entity> comp = (e1, e2) -> Integer.compare(e1.getValue(),e2.getValue());
