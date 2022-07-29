@@ -1,4 +1,4 @@
 package telran.entity.dao;
 
-public class EntityuImplA  {
+public class EntityuImplB {
 }
